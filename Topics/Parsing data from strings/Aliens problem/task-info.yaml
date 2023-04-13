@@ -1,0 +1,17 @@
+type: code
+files:
+- name: main.go
+  visible: true
+  text: "package main\n\nimport (\n\t\"fmt\"\n\t\"strconv\"\n)\n\nconst bitSize =\
+    \ 64\n\nfunc main() {\n\tvar num string\n\tfmt.Scanln(&num)\n\tvar base int\n\t\
+    fmt.Scanln(&base)\n\n\tdec, err := ?.?Int(?, ?, bitSize)\n\tif err != nil {\n\t\
+    \tfmt.Println(err)\n\t}\n\tfmt.Printf(\"Num %s, base %d is %d in decimal\", num,\
+    \ base, dec)\n}"
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/24762#comment
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: "Thu, 13 Apr 2023 15:50:12 UTC"
+record: -1
+submission_language: go

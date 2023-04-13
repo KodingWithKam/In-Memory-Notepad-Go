@@ -1,0 +1,5 @@
+content:
+- Theory
+- Counting the number of word tokens
+- Discarding a part of text
+- Working with a custom split function

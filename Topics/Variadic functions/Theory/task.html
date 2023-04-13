@@ -1,0 +1,63 @@
+<h2>Variadic functions</h2>
+<div class="step-text">
+<p>You already know some things about functions in Golang. Every function has a name, a list of parameters, a return type, and a function body. It's possible to divide functions based on the return statement: a standard function (with <code class="language-go">return</code>) and a procedure (just actions, without <code class="language-go">return</code>).</p><p>What you maybe didn't know is that Golang has a third type of functions. What if you learned that you can create a function with an indefinite number of arguments?</p><p>Welcome to a new topic about functions. You'll get acquainted with a special type of function called <strong>variadic</strong>. You will learn how to create and use it, and where you have already met them.</p><h5 id="variadic-functions">Variadic functions</h5><p><strong>Variadic functions</strong> are a type of function that can take an indefinite number of arguments of the same type as declared in the function's parameter list.</p><p>There are many operations where variadic functions are commonly used, such as arithmetic operations, string concatenation, logical operations, and even input/output operations. Below are a few examples of regular functions:</p><pre><code class="language-go">Sum(1, 2) // 3
+Concat("Hello ", "World!") // "Hello World!"</code></pre><p>The <code class="language-go">Sum()</code> function calculates the total sum of numbers, and the <code class="language-go">Concat()</code> function concatenates strings. Nothing special. Just standard functions with two parameters. Let's imagine a signature of the <code class="language-go">Sum()</code> function:</p><pre><code class="language-go">func Sum(a int, b int) int {}</code></pre><p>What if you need to add a third value? Do you have to create a new function? Or use a code similar to this: <code class="language-go">Sum(Sum(1, 2), 3)</code>? Of course not. The <code class="language-go">Sum()</code> and <code class="language-go">Concat()</code> functions can be variadic. With variadic functions, you can pass a lot more arguments. For example:</p><pre><code class="language-go">Sum(1, 2, 3, 4, 5) // 15
+Concat("Hello ", "World! ", "I'm alive!") // "Hello World! I'm alive!"</code></pre><p>Functions are still the same, but you can use an unlimited count of arguments! The signature of such functions looks like this:</p><pre><code class="language-go">func Sum(nums ...int) int {}
+func Concat(strings ...string) string {}</code></pre><p>Here is the first rule of using a variadic function: its arguments must have the same type. You can declare a variadic function by preceding the type of the final parameter with an ellipsis <code class="language-go">...</code>. This syntax allows us to call the function with zero to multiple values of the specified type.</p><h5 id="variadic-functions-in-the-fmt-package">Variadic functions in the fmt package</h5><p>You have already seen variadic functions when using the <code class="language-go">fmt</code> package like <code class="language-go">fmt.Scan()</code> or <code class="language-go">fmt.Println()</code>:</p><pre><code class="language-go">package main
+
+import "fmt"
+
+func main() {
+    var number int
+    var line string
+
+    fmt.Scan(&amp;number, &amp;line) // Input: 42 Galaxy
+
+    fmt.Println("The number is", number) // The number is 42
+    fmt.Printf("The line is %s\n", line) // The line is Galaxy
+}</code></pre><p>You've read above that variadic functions could take a varying number of arguments of the same type. However, you might be wondering how the <code class="language-go">fmt.Scan()</code> and <code class="language-go">fmt.Println()</code> functions can take arguments of both <code class="language-go">int</code> and <code class="language-go">string</code> types?</p><p>To explain this in more detail, let's take a look at the <a href="https://pkg.go.dev/fmt#Println" rel="noopener noreferrer nofollow" target="_blank">documentation</a> for both functions:</p><pre><code class="language-go">func Println(a ...any) (n int, err error) {}
+func Scan(a ...any) (n int, err error) {}</code></pre><div class="alert alert-primary"><p>Take notice that <code class="language-go">any</code> is a special type in Go, for the cases when any data type is suitable, or when the process of the function doesn't depend on the specific type of variable.</p></div><p>As you can see, both <code class="language-go">Println()</code> and <code class="language-go">Scan()</code> functions' parameter lists have the (<code class="language-go">a ...any</code>) parameter declaration. This means they can take a varying number of arguments of any type.</p><p>Now let's take a closer look at the <code class="language-go">fmt.Printf()</code> function:</p><pre><code class="language-go">func Printf(format string, a ...any) (n int, err error) {}</code></pre><p>In the function parameter list of <code class="language-go">fmt.Printf()</code> the first parameter is the format string, and the last parameter is the variadic parameter <code class="language-go">a ...any</code>. Here is the second main rule of using variadic functions: you must place the variadic parameter with ellipsis <code class="language-go">...</code> at the end of the parameter list.</p><h5 id="variadic-functions-in-the-builtin-package">Variadic functions in the builtin package</h5><p>Another example of a variadic function included in Go's standard library is the <code class="language-go">append()</code> function from the <code class="language-go">builtin</code> package:</p><pre><code class="language-go">func append(slice []Type, elems ...Type) []Type {}</code></pre><p>The <code class="language-go">append()</code> function takes a <code class="language-go">slice</code> and adds a variadic number <code class="language-go">elems</code> of the same data type to the end of the <code class="language-go">slice</code>.</p><pre><code class="language-go">...
+
+func main() {
+    numbers := []int{1, 2, 3} // [1 2 3] 
+    numbers = append(numbers, 4, 5, 6) // [1 2 3 4 5 6]
+}</code></pre><p>Take notice that apart from <code class="language-go">append()</code>, there are other variadic functions in the <code class="language-go">builtin</code> package, such as <code class="language-go">print()</code> and <code class="language-go">println()</code>.</p><h5 id="creating-a-variadic-function">Creating a variadic function</h5><p>Let's return to the first section and make the functions work. All the functions have the same signature: they get a list of values and process the same type of actions (addition or concatenation).</p><p>For now, you still don't know how to process the argument provided by the ellipsis. Here is the last main fact about variadic functions: the ellipsis argument is just a slice. Pretty simple! To process the slice, you can use a loop:</p><pre><code class="language-go">...
+
+func main() {
+    fmt.Println(Sum(1, 2, 3)) // 6
+    fmt.Println(Concat("Hello ", "World! ", "I'm alive!")) // Hello World! I'm alive!
+}
+
+func Sum(nums ...int) int {
+    var sum int = 0
+    for _, n := range nums {
+        sum += n
+    }
+
+    return sum
+}
+
+func Concat(strings ...string) string {
+    var result string = ""
+    for _, s := range strings {
+        result += s
+    }
+
+    return result
+}</code></pre><p>Finally, let's create a variadic function with two arguments. Let the first parameter be the divisible, and other parameters (they will be variadic) be dividers. The function will return <code class="language-go">true</code> if it is possible to divide the divisible by all dividers without remainder, or in other words, if all of the dividers are divisors. Otherwise, it will return <code class="language-go">false</code>. Below is the code for this function:</p><pre><code class="language-go">...
+
+func main() {
+    fmt.Println(divisorsCheck(12, 2, 3, 4, 6)) // true
+    fmt.Println(divisorsCheck(12, 1, 2, 3, 5)) // false
+}
+
+func divisorsCheck(divisible int, divisors ...int) bool {
+    for _, d := range divisors {
+        if divisible%d != 0 {
+            return false
+        }
+    }
+
+    return true
+}</code></pre><p>The first call of the <code class="language-go">divisorsCheck()</code> function returns <code class="language-go">true</code>, because all numbers (<span class="math-tex">\(2, 3, 4, 6\)</span>) are divisors of <span class="math-tex">\(12\)</span>. The second call of the function returns <code class="language-go">false</code>, because you can't divide <span class="math-tex">\(12\)</span> by <span class="math-tex">\(5\)</span> without a remainder.</p><h5 id="conclusion">Conclusion</h5><p>Sometimes you need to use an indefinite count of variables. If variadic functions didn't exist in Golang, it would be possible in two ways: using slices, or writing functions for each possible case. The first way is still suitable, but let's be honest, it's not pretty. Variadic functions increase the readability and accessibility of the code, that's why they are a better solution.</p><p>Here are the main rules to using variadic functions:</p><ul><li><p>a function is variadic when the type of its final parameter is preceded by an ellipsis, e.g. <code class="language-go">...int</code>;</p></li><li><p>you should place a variadic parameter at the end of the parameter list;</p></li><li><p>variadic arguments must have the same type;</p></li><li><p>the ellipsis parameter is a slice.</p></li></ul>
+</div>

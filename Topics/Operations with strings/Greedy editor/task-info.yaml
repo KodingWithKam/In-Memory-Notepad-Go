@@ -1,0 +1,20 @@
+type: code
+files:
+- name: main.go
+  visible: true
+  text: "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strings\"\
+    \n)\n\n// Which function from the `strings` package is used to replace all appearances\n\
+    // of a word or character in a string with another word or character?\nfunc symbolsCounter(text\
+    \ string) int {\n\ttext = ?.?(?, ?, \"\")\n\treturn len(text)\n}\n\n// DO NOT\
+    \ delete or modify the contents of the main function!\nfunc main() {\n\tscan :=\
+    \ bufio.NewScanner(os.Stdin)\n\tscan.Scan()\n\tallLength := len(scan.Text())\n\
+    \tsymbols := symbolsCounter(scan.Text())\n\tfmt.Printf(\"Symbols in text: %d\\\
+    nSpaces in text: %d\", symbols, allLength-symbols)\n}"
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/24771#comment
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: "Thu, 06 Apr 2023 21:38:42 UTC"
+record: -1
+submission_language: go

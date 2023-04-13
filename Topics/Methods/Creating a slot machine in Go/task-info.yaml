@@ -1,0 +1,20 @@
+type: code
+files:
+- name: main.go
+  visible: true
+  text: "package main\n\nimport (\n\t\"fmt\"\n\t\"math/rand\"\n)\n\ntype SlotMachine\
+    \ struct {\n\tSlots [3]int\n}\n\nconst nineUnits = 9\n\n// Create the Play() and\
+    \ CheckWin() methods below:\nfunc (s *?) ?() {\n\tfor i := range ? {\n\t\t?.?[i]\
+    \ = rand.Intn(nineUnits)\n\t}\n}\n\nfunc (s *?) ?() string {\n\tif ? == ? && ?\
+    \ == ? {\n\t\treturn \"Jackpot!\"\n\t}\n\treturn \"You lost!\"\n}\n\n// DO NOT\
+    \ delete or modify the contents of the main() function!\nfunc main() {\n\tvar\
+    \ money int64\n\tfmt.Scanln(&money)\n\trand.Seed(money)\n\n\tvar sm SlotMachine\n\
+    \tsm.Play()\n\tfmt.Println(sm.Slots)\n\tfmt.Println(sm.CheckWin())\n}"
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/24757#comment
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: "Mon, 10 Apr 2023 02:13:13 UTC"
+record: -1
+submission_language: go

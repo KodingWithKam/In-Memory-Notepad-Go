@@ -1,0 +1,20 @@
+type: code
+files:
+- name: main.go
+  visible: true
+  text: "package main\n\nimport (\n    \"fmt\"\n    \"os\"\n)\n\nfunc checkFile(filename\
+    \ string) { \n    file, err := os.Open(filename)\n    if ? {\n        fmt.Println(?)\n\
+    \        return\n    }\n    defer file.Close()\n}\n\n// DO NOT delete or modify\
+    \ the contents of the main function!\nfunc main() {\n    checkFile(\"nonexisting_file.txt\"\
+    )\n}"
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/16781#comment
+status: Solved
+feedback:
+  message: |-
+    <html>Passed. Well done! 🥇
+
+    open nonexisting_file.txt: no such file or directory</html>
+  time: "Thu, 06 Apr 2023 22:09:17 UTC"
+record: -1
+submission_language: go

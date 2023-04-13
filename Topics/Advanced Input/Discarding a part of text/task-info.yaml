@@ -1,0 +1,18 @@
+type: code
+files:
+- name: main.go
+  visible: true
+  text: "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"io\"\n\t\"os\"\n)\n\
+    \nconst discardedBytes = 10\n\nfunc main() {\n\treader := bufio.NewReader(os.Stdin)\n\
+    \n    _, err := ?.?(discardedBytes)\n\n    // DO NOT delete or modify the code\
+    \ below:\n    if err != nil {\n\t\tfmt.Println(err)\n\t}\n\n    data, err := reader.ReadString('\\\
+    n')\n\tif err != nil && err != io.EOF {\n\t\tfmt.Println(err)\n\t}\n\n    fmt.Println(data)\n\
+    }"
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/24773#comment
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: "Sun, 09 Apr 2023 20:56:57 UTC"
+record: -1
+submission_language: go

@@ -1,0 +1,22 @@
+type: choice
+is_multiple_choice: true
+options:
+- text: <code>strings.Builder</code> dynamically allocates memory for its buffer slice.
+- text: "<code>strings.Builder</code> always requires the <code>Grow()</code> function\
+    \ to allocate memory to its buffer slice, because it is not able to allocate memory\
+    \ dynamically to its buffer slice."
+- text: <code>strings.Builder</code> creates a new string every time it modifies a
+    string.
+- text: <code>strings.Builder</code> uses an internal buffer slice to store its data.
+files:
+- name: main.go
+  visible: true
+  text: |+
+    // You can experiment here, it won’t be checked
+
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/18079#comment
+status: Solved
+record: -1
+custom_name: What is the strings.Builder type?
+local_check: false

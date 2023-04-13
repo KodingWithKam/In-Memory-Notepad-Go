@@ -1,0 +1,6 @@
+content:
+- Theory
+- Creating a custom function — concatBytes
+- What is the strings.Builder type
+- String builder with Unicode characters
+- The String() method

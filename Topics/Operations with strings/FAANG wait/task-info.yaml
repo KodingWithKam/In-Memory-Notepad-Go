@@ -1,0 +1,18 @@
+type: code
+files:
+- name: main.go
+  visible: true
+  text: "package main\n\nimport (\n    \"fmt\"\n    \"strings\"\n)   \n\nfunc main()\
+    \ {\n    algorithms := parseAlgorithms()\n    fmt.Println(?) // TODO: format algorithms\n\
+    }\n\n// DO NOT CHANGE\nfunc parseAlgorithms() []string {\n    var algorithms []string\n\
+    \    for {\n        var algo string\n        if _, err := fmt.Scan(&algo); err\
+    \ != nil {\n            break\n        }\n        algorithms = append(algorithms,\
+    \ algo)\n    }\n    return algorithms\n}"
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/18553#comment
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: "Thu, 06 Apr 2023 21:35:19 UTC"
+record: -1
+submission_language: go

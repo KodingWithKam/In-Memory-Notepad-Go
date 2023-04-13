@@ -1,0 +1,32 @@
+type: code
+files:
+- name: main.go
+  visible: true
+  text: |-
+    package main
+
+    import "fmt"
+
+    func main() {
+        var num1, num2, num3 float32
+        fmt.Scan(&num1, ?, ?)
+
+        fmt.Println(Average(?))
+    }
+
+    func Average(numbers ?) float32 {
+        var sum float32
+        for _, num := range numbers {
+            sum += ?
+        }
+
+        return sum / float32(?)
+    }
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/21804#comment
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: "Mon, 10 Apr 2023 21:15:24 UTC"
+record: -1
+submission_language: go

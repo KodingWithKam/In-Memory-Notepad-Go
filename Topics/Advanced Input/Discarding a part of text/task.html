@@ -1,0 +1,8 @@
+<h2>Discarding a part of text</h2>
+<div class="step-text">
+<p></p>
+<p>Your program's standard input (<code class="java">stdin</code>) is receiving data. But you know that the first 10 bytes of this data is information about the sender. In further processing, this is completely useless. Yes, you can take the whole string and then trim the first 10 bytes, but that's inefficient. Let's try to cope with the standard features of buffered input.</p>
+<p>In this task, it is guaranteed that at least 10 bytes of data will be received as input. Therefore, you do not need to check the range of the incoming data.</p>
+<p></p><div class="alert alert-warning">This problem uses a method that you did not study in theory. It might be interesting for you to try out the Go documentation library. You can look for the required method in the <a href="https://pkg.go.dev/bufio" rel="noopener noreferrer nofollow" target="_blank"><code class="java">bufio</code> documentation.</a></div>
+<p><b>Tip:</b> If the documentation still seems too complicated and confusing, you can look at the <code class="java"><a href="https://pkg.go.dev/bufio#Reader.Discard" rel="noopener noreferrer nofollow" target="_blank">Discard()</a></code> method</p><br><b>Sample Input:</b><br><pre><code class="language-no-highlight">miner28512success</code></pre><br><b>Sample Output:</b><br><pre><code class="language-no-highlight">success</code></pre><br><br><br><font color="gray">Memory limit: 256 MB</font><br><font color="gray">Time limit: 8 seconds</font><br><br>
+</div>

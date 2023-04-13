@@ -1,0 +1,14 @@
+type: code
+files:
+- name: main.go
+  visible: true
+  text: "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tvar num int\n\n\t_, err\
+    \ := fmt.Scan(&num)\n\tif err != nil {\n\t\tfmt.Println(?)\n\t\treturn\n\t}\n}"
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/23493#comment
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: "Thu, 06 Apr 2023 22:05:33 UTC"
+record: -1
+submission_language: go

@@ -1,0 +1,13 @@
+type: code
+files:
+- name: main.go
+  visible: true
+  text: "package main\n\nimport (\n\t\"fmt\"\n\t\"reflect\"\n)\n\ntype Pokemon struct\
+    \ {\n\tName   string\n\tNumber int\n    Level  int\n}\n\n// Initialize the `pikachu`\
+    \ struct using the `new()` function below\nfunc main() {\n\tpikachu := ?\n\n\t\
+    isCreatedWithNew(pikachu) // DO NOT delete this line!\n}"
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/23511#comment
+status: Solved
+record: -1
+submission_language: go

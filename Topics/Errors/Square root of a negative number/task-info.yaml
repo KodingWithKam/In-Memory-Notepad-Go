@@ -1,0 +1,18 @@
+type: code
+files:
+- name: main.go
+  visible: true
+  text: "package main\n\nimport (\n\t\"errors\"\n\t\"fmt\"\n\t\"math\"\n)\n\nfunc\
+    \ negativeNumError() error {\n\t// create a custom error message within the 'err'\
+    \ variable here\n\terr := ?\n\n\treturn err\n}\n\n// DO NOT delete or modify the\
+    \ code within the main() function!\nfunc main() {\n\tvar num float64\n\tfmt.Scanf(\"\
+    %f\", &num)\n\n\tif num < 0 {\n\t\terr := negativeNumError()\n\t\tfmt.Println(err)\n\
+    \t\treturn\n\t}\n\tfmt.Println(math.Sqrt(num))\n}"
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/26245#comment
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: "Thu, 06 Apr 2023 22:06:57 UTC"
+record: -1
+submission_language: go

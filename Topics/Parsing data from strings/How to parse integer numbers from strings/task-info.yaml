@@ -1,0 +1,19 @@
+type: choice
+is_multiple_choice: true
+options:
+- text: <code>strconv.Atoi()</code>
+- text: <code>strconv.Itoa()</code>
+- text: <code>strconv.ParseInt()</code>
+- text: <code>strconv.FormatInt()</code>
+files:
+- name: main.go
+  visible: true
+  text: |+
+    // You can experiment here, it won’t be checked
+
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/17936#comment
+status: Solved
+record: -1
+custom_name: How to parse integer numbers from strings?
+local_check: false

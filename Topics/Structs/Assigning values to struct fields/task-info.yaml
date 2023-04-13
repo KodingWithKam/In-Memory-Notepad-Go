@@ -1,0 +1,22 @@
+type: code
+files:
+- name: main.go
+  visible: true
+  text: "package main\n\nimport \"fmt\"\n\n// do not change the name or the fields\
+    \ of the 'Country' struct!\ntype Country struct {\n    Name     string\n    Capital\
+    \  string\n    Currency string\n}\n\nfunc main() {\n    // create an instance\
+    \ of the Country struct within the 'germany' variable here.\n\t// do not forget\
+    \ to assign the values mentioned above to its fields too!\n    var germany ?\n\
+    \n    ?.? = ? // assign the value 'Germany' to the 'Name' field here\n    ?.?\
+    \ = ? // assign the value 'Berlin' to the 'Capital' field here\n    ?.? = ? //\
+    \ assign the value 'Euro' to the 'Currency' field here\n\n    // Print the struct\
+    \ fields in order Name->Capital->Currency each on a new line:\n    fmt.Printf(\"\
+    %s\\n%s\\n%s\\n\", ?.?, ?.?, ?.?)\n}"
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/17492#comment
+status: Solved
+feedback:
+  message: <html>Passed. Well done! 🏆</html>
+  time: "Mon, 10 Apr 2023 01:10:43 UTC"
+record: -1
+submission_language: go

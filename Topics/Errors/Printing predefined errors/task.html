@@ -1,0 +1,9 @@
+<h2>Printing predefined errors</h2>
+<div class="step-text">
+<p></p>
+<p>An interesting detail is that the <a href="https://pkg.go.dev/fmt#Scan" rel="noopener noreferrer nofollow" target="_blank"><code class="language-go">fmt.Scan</code> family of functions</a> return the number of successfully scanned items <code class="language-go">n</code>, and a predefined error <code class="language-go">err</code>:</p>
+<pre><code class="language-go">func Scan(a ...any) (n int, err error)
+func Scanf(format string, a ...any) (n int, err error)
+func Scanln(a ...any) (n int, err error)</code></pre>
+<p>Your task is to create a very simple Go program that handles and prints the predefined error <code class="language-go">err</code> of the <code class="language-go">fmt.Scan()</code> function when trying to read a <code class="language-go">string</code> into the <code class="language-go">num</code> variable of the<code class="language-go">int</code> type.</p><br><br><font color="gray">Memory limit: 256 MB</font><br><font color="gray">Time limit: 8 seconds</font><br><br>
+</div>

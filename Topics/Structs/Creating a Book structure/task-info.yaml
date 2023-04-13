@@ -1,0 +1,36 @@
+type: code
+files:
+- name: main.go
+  visible: true
+  text: |-
+    package main
+
+    import "fmt"
+
+    const TotalPages = 310
+
+    // create the Book struct here with the Title, Author and Pages fields
+    type ? struct {
+        ? ?
+        ? ?
+        ? ?
+    }
+
+    // DO NOT delete or modify the contents of the main function!
+    func main() {
+        theHobbit := Book {
+            Title: "The Hobbit",
+            Author: "J. R. R. Tolkien",
+            Pages: TotalPages,
+        }
+
+        fmt.Printf("%#v", theHobbit)
+    }
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/17491#comment
+status: Solved
+feedback:
+  message: <html>Passed. Well done! 🏆</html>
+  time: "Mon, 10 Apr 2023 01:00:14 UTC"
+record: -1
+submission_language: go

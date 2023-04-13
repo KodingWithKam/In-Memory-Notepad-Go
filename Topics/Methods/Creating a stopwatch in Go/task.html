@@ -1,0 +1,12 @@
+<h2>Creating a stopwatch in Go</h2>
+<div class="step-text">
+<p></p>
+<p></p><div class="alert alert-warning">You've encountered a challenging problem; it requires basic knowledge of the <code class="java">time</code> package to solve it. If you're ready to put your thinking cap on 💡🧢, brace yourself, and good luck!
+
+<p>The task statement and HINT should help you solve this problem; however, if this problem is too complex, you can postpone it and come back later to try and solve it.</p></div>
+<p>Lena wants to create a simple stopwatch using Go. To do this, she has created the <code class="java">Stopwatch</code> struct; it has two fields <code class="java">start</code> , and <code class="java">end</code> of the <code class="java">time.Time</code> type that will allow her to track time on her stopwatch.</p>
+<p>Now Lena wants to create a few methods to make her stopwatch properly track time in her Go program:</p>
+<p><code class="java">Start()</code> and <code class="java">End()</code> — To make the <code class="java">s.start</code> and <code class="java">s.end</code> fields equal to <code class="java">time.Now()</code></p>
+<p><code class="java">TimeElapsed()</code> — It should return the time elapsed by subtracting <code class="java">s.end</code> from <code class="java">s.start</code> by calling the <code class="java">s.end.Sub()</code> method and passing to it the <code class="java">s.start</code> time as an argument.</p>
+<p><b>Tip:</b> You can obtain the time elapsed via the <code class="java">s.end.Sub(s.start)</code> statement.</p><br><b>Sample Input:</b><br><pre><code class="language-no-highlight">3</code></pre><br><b>Sample Output:</b><br><pre><code class="language-no-highlight">Elapsed time: 3.0s</code></pre><br><br><br><font color="gray">Memory limit: 256 MB</font><br><font color="gray">Time limit: 8 seconds</font><br><br>
+</div>

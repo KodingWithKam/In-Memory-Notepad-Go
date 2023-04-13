@@ -1,0 +1,17 @@
+type: code
+files:
+- name: main.go
+  visible: true
+  text: "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n)\n\nfunc main()\
+    \ {\n\tscanner := bufio.NewScanner(os.Stdin)\n\n\t// Set the correct split function\
+    \ below:\n\tscanner.Split(?)\n\n\t// Write the for loop below with the correct\
+    \ scanner statement\n\tcount := 0\n\tfor scanner.? {\n\t\tcount++\n\t}\n\tfmt.Println(count)\n\
+    }"
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/18571#comment
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: "Sat, 08 Apr 2023 22:51:57 UTC"
+record: -1
+submission_language: go

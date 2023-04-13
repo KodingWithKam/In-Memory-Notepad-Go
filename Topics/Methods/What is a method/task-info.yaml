@@ -1,0 +1,21 @@
+type: choice
+is_multiple_choice: true
+options:
+- text: Methods are a special type of function with a defined receiver argument.
+- text: We can only define methods on <code>struct</code> types to properly follow
+    Object-Oriented programming conventions.
+- text: "Methods are the same as functions, they just have a different name to make\
+    \ them fancier.\U0001f192\U0001f976"
+- text: We can define methods on <code>struct</code> and non-struct types.
+files:
+- name: main.go
+  visible: true
+  text: |+
+    // You can experiment here, it won’t be checked
+
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/17740#comment
+status: Solved
+record: -1
+custom_name: What is a method?
+local_check: false

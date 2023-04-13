@@ -1,0 +1,18 @@
+type: code
+files:
+- name: main.go
+  visible: true
+  text: "package main\n\nimport (\n    \"fmt\"\n    \"strings\" \n) \n\n// Modify\
+    \ the concat function template below to properly implement the concatBytes function\n\
+    func concat?(bytes ...byte) string {\n    var builder strings.Builder\n    for\
+    \ _, x := range bytes {\n        builder.Write?(x)\n    }\n    return builder.String()\n\
+    }\n\nfunc main() {\n    fmt.Println(concatBytes('J', 'B', 'A', 'c', 'a', 'd',\
+    \ 'e', 'm', 'y'))\n}"
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/18084#comment
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: "Wed, 12 Apr 2023 21:16:06 UTC"
+record: -1
+submission_language: go

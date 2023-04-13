@@ -1,0 +1,18 @@
+type: choice
+is_multiple_choice: false
+options:
+- text: "<code>All(true, false, true)</code>"
+- text: <code>All(0)</code>
+- text: "<code>All(num &gt;=0, num &lt; 5)</code>"
+- text: <code>All(true)</code>
+files:
+- name: main.go
+  visible: true
+  text: |+
+    // You can experiment here, it won’t be checked
+
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/21803#comment
+status: Solved
+record: -1
+local_check: false

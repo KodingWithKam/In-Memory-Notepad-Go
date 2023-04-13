@@ -1,0 +1,23 @@
+type: choice
+is_multiple_choice: true
+options:
+- text: Each element defined within a struct is known as a <b>field</b>.
+- text: "A <code>struct</code> is declared via the <code>type StructName struct{...}</code>\
+    \ syntax."
+- text: "A <code>struct</code> is declared via the <code>struct StructName{...}</code>\
+    \ syntax."
+- text: Each element defined within a struct is known as a <b>column</b>.
+- text: It is a data type that allows you to group and combine elements of different
+    types into a single type.
+files:
+- name: main.go
+  visible: true
+  text: |+
+    // You can experiment here, it won’t be checked
+
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/23510#comment
+status: Solved
+record: -1
+custom_name: What is a struct?
+local_check: false

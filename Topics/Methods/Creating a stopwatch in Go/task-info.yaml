@@ -1,0 +1,49 @@
+type: code
+files:
+- name: main.go
+  visible: true
+  text: |-
+    package main
+
+    import (
+        "fmt"
+        "time"
+    )
+
+    type Stopwatch struct {
+        start time.Time
+        end   time.Time
+    }
+
+    // Create the Start(), End() and TimeElapsed() methods below:
+    func (s *?) Start() {
+        s.start = ?
+    }
+
+    func (s *?) ?() {
+        s.end = ?
+    }
+
+    func (s *?) ?() time.Duration {
+        return s.?.?(?)
+    }
+
+    // DO NOT delete or modify the contents of the main() function!
+    func main() {
+        var s Stopwatch
+        var seconds int
+        fmt.Scanln(&seconds)
+
+        s.Start()
+        time.Sleep(time.Duration(seconds) * time.Second)
+        s.End()
+        fmt.Printf("Elapsed time: %.3vs", s.TimeElapsed())
+    }
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/24756#comment
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: "Mon, 10 Apr 2023 02:25:28 UTC"
+record: -1
+submission_language: go
